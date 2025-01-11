@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Verification Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .result-container {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .result-container p {
+            margin: 10px 0;
+        }
+        a {
+            font-size: 1.2em;
+            color: #2ecc71;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verification Result</h1>
+    
+    <div class="result-container">
+        <p><strong>Authenticity:</strong> {{ result }}</p>
+        <p><strong>Variance:</strong> {{ variance }}</p>
+        <p><strong>Skew:</strong> {{ skew }}</p>
+        <p><strong>Kurtosis:</strong> {{ kurtosis }}</p>
+        <p><strong>Entropy:</strong> {{ entropy }}</p>
+    </div>
+
+    <div class="image-container">
+        <h3>Original Image</h3>
+        <img src="data:image/svg+xml;base64,{{ original_image }}" alt="Original Image">
+        <h3>Edge Image</h3>
+        <img src="data:image/svg+xml;base64,{{ edge_image }}" alt="Edge Image">
+    </div>
+
+    <p><a href="/">Go Back</a></p>
+</body>
+</html>
